@@ -77,9 +77,20 @@
 		max-width: func.em(1110, var.$font-size-primary);
 	}
 
+	.card__inner {
+		position: relative;
+	}
+
 	.card__image,
 	.card__content {
-		max-width: 50%;
+		width: 50%;
+	}
+
+	.card__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
 	}
 
 	.card__image-inner,
@@ -88,7 +99,7 @@
 	}
 
 	.card__image-inner {
-		height: auto;
+		height: 100%;
 		padding-bottom: 0;
 	}
 
@@ -106,7 +117,23 @@
 		margin-bottom: func.em(60, var.$font-size-primary);
 	}
 
+	.card__stats-list {
+		margin: func.em(-10) func.em(-10) 0;
+	}
+
+	.card__stats-list::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
 	.card__stats-list-item {
-		min-width: func.em(112, 12);
+		float: left;
+		width: 33.33%;
+		padding: func.em(10);
+	}
+
+	.card__stats-list-item:not(:first-child) {
+		margin-top: 0;
 	}
 }
