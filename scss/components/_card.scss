@@ -2,7 +2,6 @@
 @use '../abstracts/functions' as func;
 
 .card {
-	width: 100%;
 	max-width: func.em(420, var.$font-size-primary);
 	padding: func.em(30, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
